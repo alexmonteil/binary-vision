@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Signin component
 class SignIn extends React.Component {
     constructor(props) {
         super(props);
@@ -9,14 +10,17 @@ class SignIn extends React.Component {
         }
     }
 
+    // Updates state with email for signin
     onEmailChange = event => {
         this.setState({ signInEmail: event.target.value });
     }
 
+    // Updates state with password for signin
     onPasswordChange = event => {
         this.setState({ signInPassword: event.target.value });
     }
 
+    // Calls Signin endpoint and returns user. Loads + routes user.
     onSubmitSignIn = () => {
         fetch('https://immense-tundra-25279.herokuapp.com/signin', {
             method: 'post',

@@ -1,6 +1,7 @@
 import React from 'react';
 import './ImageLinkForm.css';
 
+// Displays Greeting and input + submit button
 const ImageLinkForm = ({ onInputChange, onButtonSubmit }) => {
     return (
         <div>

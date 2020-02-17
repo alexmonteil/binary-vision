@@ -9,6 +9,8 @@ import SignIn from './components/SignIn/SignIn';
 import Register from './components/Register/Register';
 import './App.css';
 
+
+// Particles.js parameters 
 const particlesOptions = {
   particles: {
     number: {
@@ -21,6 +23,7 @@ const particlesOptions = {
   }
 };
 
+// Initial State of the App
 const initialState = {
   input: '',
   imageURL: '',
@@ -42,6 +45,7 @@ class App extends React.Component {
     this.state = initialState;
   }
 
+  // Loading User into Application State
   loadUser = data => {
     this.setState({ user: {
       id: data.id,
@@ -52,10 +56,12 @@ class App extends React.Component {
     }});
   }
 
+  // Updates state when user provides input
   onInputChange = event => {
     this.setState({input: event.target.value});
   }
 
+  // Takes response from API call and returns dimensions of the facebox
   calculateFaceLocation = data => {
     const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
     const inputimage = document.getElementById('inputimage');
@@ -70,10 +76,12 @@ class App extends React.Component {
     }
   }
 
+  // Updates state with box dimensions
   displayFaceBox = box => {
     this.setState({box: box});
   }
 
+  // Makes the API call, updates user entry count and displays facebox over the image
   onButtonSubmit = () => {
     this.setState({imageURL: this.state.input});
       fetch('https://immense-tundra-25279.herokuapp.com/image', {
@@ -104,6 +112,7 @@ class App extends React.Component {
       .catch(err => console.log(err));
   }
 
+  // Application Routing
   onRouteChange = route => {
     if (route === 'signout') {
       this.setState(initialState);

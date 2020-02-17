@@ -1,12 +1,15 @@
+/* Main App component Styling */
 .App {
   text-align: center;
 }
 
+/* Utilities */
 .center {
   display: flex;
   justify-content: center;
 }
 
+/* Particle.js styling */
 .particles {
   position: fixed;
   top: 0;

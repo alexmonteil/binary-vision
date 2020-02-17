@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Displays greeting and user entry count
 const Rank = ({name, entries}) => {
     return (
         <div>

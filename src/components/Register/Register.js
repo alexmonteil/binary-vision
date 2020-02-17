@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Register component 
 class Register extends React.Component {
     constructor(props) {
         super(props);
@@ -10,18 +11,22 @@ class Register extends React.Component {
         }
     }
 
+    // Updates state with name for registration
     onNameChange = event => {
         this.setState({ registerName: event.target.value });
     }
 
+    // Updates state with email for registration
     onEmailChange = event => {
         this.setState({ registerEmail: event.target.value });
     }
 
+    // Updates state with password for registration
     onPasswordChange = event => {
         this.setState({ registerPassword: event.target.value });
     }
 
+    // Calls Register endpoint and returns user. Loads + routes user.
     onSubmitRegister = () => {
         fetch('https://immense-tundra-25279.herokuapp.com/register', {
             method: 'post',

@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Displays navigation menu
 const Navigation = ({ onRouteChange, isSignedIn }) => {
 
     if (isSignedIn) {
