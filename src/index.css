@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap');
+
 body {
   margin: 0;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Baloo Chettan 2', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(to right, #5118b9, #58c879);
