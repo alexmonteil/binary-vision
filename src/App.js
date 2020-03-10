@@ -93,7 +93,8 @@ class App extends React.Component {
       })
       .then(response => response.json())
       .then(data => {
-        if (data) {
+        console.log(data);
+        if (data !== undefined && data.hasOwnProperty('outputs')) {
           fetch('https://immense-tundra-25279.herokuapp.com/entries', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
@@ -104,10 +105,10 @@ class App extends React.Component {
             .then(resp => resp.json())
             .then(count => {
               this.setState(Object.assign(this.state.user, { entries: count }));
+              this.displayFaceBox(this.calculateFaceLocation(data));
             })
             .catch(console.log);
         }
-        this.displayFaceBox(this.calculateFaceLocation(data))
       })
       .catch(err => console.log(err));
   }
