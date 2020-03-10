@@ -1,4 +1,4 @@
 /* Logo Styling */
 .Tilt {
-    background: linear-gradient(to right, #5118b9, #58c879);
+    background: url('./ai.jpg') no-repeat center center/cover;
 }

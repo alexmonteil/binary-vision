@@ -5,7 +5,7 @@ body {
   font-family: 'Baloo Chettan 2', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(to right, #5118b9, #58c879);
+  background: linear-gradient(to right, #218f84, #170360);
 }
 
 button {
