@@ -84,7 +84,7 @@ class App extends React.Component {
   // Makes the API call, updates user entry count and displays facebox over the image
   onButtonSubmit = () => {
     this.setState({imageURL: this.state.input});
-      fetch('https://immense-tundra-25279.herokuapp.com/image', {
+      fetch('https://binary-vision-api.herokuapp.com/image', {
               method: 'post',
               headers: {'Content-Type': 'application/json'},
               body: JSON.stringify({
@@ -93,9 +93,8 @@ class App extends React.Component {
       })
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         if (data !== undefined && data.hasOwnProperty('outputs')) {
-          fetch('https://immense-tundra-25279.herokuapp.com/entries', {
+          fetch('https://binary-vision-api.herokuapp.com/entries', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

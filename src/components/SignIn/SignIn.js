@@ -22,7 +22,7 @@ class SignIn extends React.Component {
 
     // Calls Signin endpoint and returns user. Loads + routes user.
     onSubmitSignIn = () => {
-        fetch('https://immense-tundra-25279.herokuapp.com/signin', {
+        fetch('https://binary-vision-api.herokuapp.com/signin', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

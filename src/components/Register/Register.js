@@ -28,7 +28,7 @@ class Register extends React.Component {
 
     // Calls Register endpoint and returns user. Loads + routes user.
     onSubmitRegister = () => {
-        fetch('https://immense-tundra-25279.herokuapp.com/register', {
+        fetch('https://binary-vision-api.herokuapp.com/register', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
