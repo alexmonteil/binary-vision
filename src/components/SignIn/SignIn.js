@@ -46,7 +46,11 @@ class SignIn extends React.Component {
                 <main className="pa4">
                     <div className="measure">
                         <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-                            <legend className="f1 fw6 ph0 mh0 light-blue">Sign In</legend>
+                            <legend className="f1 fw6 ph0 mh0 light-blue center">Sign In</legend>
+                            <div class="mt3">
+                                <p class="navy b">Demo username: <span class="light-blue b">demo</span></p>
+                                <p class="navy b">Demo password: <span class="light-blue b">Demo123!</span></p>
+                            </div>
                             <div className="mt3">
                                 <label className="db fw6 lh-copy f6 light-blue" htmlFor="email-address">Email</label>
                                 <input onChange={this.onEmailChange} className="pa2 input-reset ba bg-transparent hover-bg-navy hover-white w-100 b--navy" type="email" name="email-address" id="email-address" />
