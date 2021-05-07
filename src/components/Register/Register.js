@@ -54,8 +54,8 @@ class Register extends React.Component {
                         <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
                             <legend className="f1 fw6 ph0 mh0 light-blue center">Register</legend>
                             <div class="mt3">
-                                <p class="navy b">Demo username: <span class="light-blue b">demo</span></p>
-                                <p class="navy b">Demo password: <span class="light-blue b">Demo123!</span></p>
+                                <p className="navy b">Demo username: <span className="light-blue b">demo</span></p>
+                                <p className="navy b">Demo password: <span className="light-blue b">Demo123!</span></p>
                             </div>
                             <div className="mt3">
                                 <label className="db fw6 lh-copy f6 light-blue" htmlFor="name">Name</label>
